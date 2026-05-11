@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# OS
+.DS_Store
+
+# Environment
+.env
+
+# Data (downloaded via scripts/download_datasets.py)
+data/
+
+# Results
+results/
+results_colab/
+results_graph_content/
+results_eval_combined_content/
+results_label_efficiency/
+
+# Paper sources
+paper/
+paper2/
+
+# Internal / Claude Code
+CLAUDE.md
+DEVLOG.md
+memory/
+.claude/
+notes/
+
+# Temporary
+tmp/
+tmp_trainer/
+checkpoints/
+
+# LaTeX artifacts (in case any leak outside paper/)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.spl
+*.log
