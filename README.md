@@ -100,7 +100,7 @@ If the script fails, you can download manually:
 
 ## Citation
 
-Paper under review. Citation information will be added upon publication.
+Journal article: https://arxiv.org/abs/2605.11053
 
 ## License
 
