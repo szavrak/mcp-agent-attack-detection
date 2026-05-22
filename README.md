@@ -1,12 +1,12 @@
-# MCPShield
+# Content-Aware Attack Detection for LLM Agent Tool-Call Traffic
 
-Content-aware graph-based attack detection for LLM agent tool-call traffic over the Model Context Protocol (MCP).
+An empirical study of content-aware attack detection for LLM agent tool-call traffic over the Model Context Protocol (MCP).
 
 ## Overview
 
-MCPShield encodes each agent session as a graph where nodes represent tool calls and edges capture sequential adjacency and data-flow links (response-to-argument substring matches). Node features combine sentence embeddings (SBERT, all-MiniLM-L6-v2) with structural metadata. A graph neural network classifies sessions as benign or attacked.
+Each agent session is encoded as a graph where nodes represent tool calls and edges capture sequential adjacency and data-flow links (response-to-argument substring matches). Node features combine sentence embeddings (SBERT, all-MiniLM-L6-v2) with structural metadata. Detectors (GNN, MLP, classical ML) classify sessions as benign or attacked.
 
-**Key finding**: metadata-only detection plateaus at AUROC ~0.64; content embeddings push it to ~0.92, demonstrating that MCP attacks primarily alter semantic content while leaving structural metadata unchanged.
+**Key finding**: metadata-only detection plateaus at AUROC ~0.64; content embeddings push it above 0.89. Tree ensembles on pooled SBERT features (XGBoost: AUROC 0.975) outperform the GNN architectures, indicating that MCP attacks primarily alter semantic content while leaving structural metadata unchanged, and that the dominant signal is in the embeddings rather than the graph structure.
 
 ## Features
 
