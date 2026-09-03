@@ -57,11 +57,8 @@ experiments_R1/cache/
 # arXiv submission bundles
 *.zip
 
-# Colab notebooks with embedded execution outputs / personal metadata
-# (the Colab workflow is documented in experiments_R1/COLAB_INSTRUCTIONS.md)
-experiments_R1/run_R1_experiments.ipynb
-experiments_R1/run_R1_refresh_all.ipynb
-
-# Old all-in-one notebook (embeds Colab outputs + account metadata)
-notebooks/mcp_ids_experiments.ipynb
+# Un-sanitized notebook originals (execution outputs + Colab account metadata)
+# stay out of the repo. Sanitized copies are committed at the canonical paths;
+# the pristine originals are kept locally as *.local.ipynb.
+*.local.ipynb
 experiments_R1/RESULTS_R1.md
